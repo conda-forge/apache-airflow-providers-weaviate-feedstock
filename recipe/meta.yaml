@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-weaviate" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_weaviate-{{ version }}.tar.gz
-  sha256: 73216192ec86e88f64197e5d813997df7ec20901d85f3a7ebbffe342aa46cea1
+  sha256: 8f88f1f9413fd117ff39877e54713b01d2e6402654ff276fa23c883c1ec08545
 
 build:
   noarch: python
