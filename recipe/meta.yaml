@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-weaviate" %}
 {% set version = "3.2.5" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +25,8 @@ requirements:
     - apache-airflow-providers-common-compat >=1.8.0
     - httpx >=0.25.0
     - weaviate-client >=4.4.0,!=4.16.7
-    - pandas >=2.1.2
+    # more restrictive for python >=3.13
+    - pandas >=2.2.3
 
 test:
   imports:
@@ -41,7 +41,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-weaviate for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/weaviate/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-weaviate/stable/index.html
   dev_url: https://github.com/apache/airflow/
