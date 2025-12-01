@@ -26,7 +26,7 @@ requirements:
     - httpx >=0.25.0
     - weaviate-client >=4.4.0,!=4.16.7
     # more restrictive for python >=3.13
-    - pandas >=2.1.2
+    - pandas >=2.2.3
 
 test:
   imports:
