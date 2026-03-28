@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-weaviate
-  version: "3.3.1"
+  version: 3.3.2
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_weaviate-${{ version }}.tar.gz
-  sha256: 840eb8547d893d40e111803a5911342372640d0533d5482c2b225b44f025d237
+  sha256: f44cbf2e2263d8f32fce24ed5f758ea7c7baf24f29675cfddfea403d6b76360c
 
 build:
   noarch: python
@@ -26,9 +26,7 @@ requirements:
     - apache-airflow-providers-common-compat >=1.8.0
     - httpx >=0.25.0
     - weaviate-client >=4.4.0,!=4.16.7
-    # more restrictive for python >=3.13
-    - pandas >=2.2.3
-
+    - pandas >=2.1.2
 tests:
   - python:
       imports:
