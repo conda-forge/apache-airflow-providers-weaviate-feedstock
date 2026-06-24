@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-weaviate
-  version: 3.3.5
+  version: "3.3.5"
 
 package:
   name: ${{ name|lower }}
@@ -26,7 +26,9 @@ requirements:
     - apache-airflow-providers-common-compat >=1.8.0
     - httpx >=0.25.0
     - weaviate-client >=4.4.0,!=4.16.7
-    - pandas >=2.1.2
+    # more restrictive for python >=3.14
+    - pandas >=2.3.3
+
 tests:
   - python:
       imports:
@@ -34,7 +36,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - '*'
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
