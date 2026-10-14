@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-weaviate
-  version: 3.5.0
+  version: 3.5.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_weaviate-${{ version }}.tar.gz
-  sha256: 7d4de31c82b8af1f0c2859ff4e4b96d19192742d34d22690355425b319a4ba77
+  sha256: b76bcf58f38f3604d01e1e01aabdf3fd9ebc6cb123e93f46dd7f5f8616e6cebb
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
